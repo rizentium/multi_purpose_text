@@ -1,8 +1,7 @@
 name: multi_purpose_text
 description: A flutter plugin for multi purpose text in single line
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/rizentium/multi_purpose_text
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

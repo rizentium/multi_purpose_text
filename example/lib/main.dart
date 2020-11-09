@@ -25,21 +25,42 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: MultiPurposeText(
-            children: [
-              TextSpan(
-                text: 'This is my',
+        body: ListView(
+          children: [
+            Center(
+              child: MultiPurposeText(
+                children: [
+                  TextSpan(
+                    text: 'This is my',
+                  ),
+                  TextSpan(
+                    text: ' github account',
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                    recognizer: new TapGestureRecognizer()
+                      ..onTap = () => print(''),
+                  ),
+                ],
               ),
-              TextSpan(
-                text: ' github account',
-                style: TextStyle(
-                  color: Colors.blue,
+            ),
+            MultiPurposeText(
+              children: [
+                TextSpan(
+                  text: 'This is my',
                 ),
-                recognizer: new TapGestureRecognizer()..onTap = () => print(''),
-              ),
-            ],
-          ),
+                TextSpan(
+                  text: ' github account',
+                  style: TextStyle(
+                    color: Colors.blue,
+                  ),
+                  recognizer: new TapGestureRecognizer()
+                    ..onTap = () => print(''),
+                ),
+              ],
+              textAlign: TextAlign.right,
+            ),
+          ],
         ),
       ),
     );
